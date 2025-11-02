@@ -1,0 +1,134 @@
+@import "tailwindcss";
+@theme {
+  --color-m: #3eb489;
+  --color-text-primary: #001810;
+  --color-text-white: #FFFFFF;
+  --color-button:#1b756b;
+  --color-text-primery:#001810;
+  --color-p-light:#7a7a7a;
+  --color-green-light:#7a7a7a;
+  --color-green-dark:#00d084;
+  --color-green-darkkest:#1b756b; 
+  --color-text-gradient1:#DCFFEA; 
+  --color-text-gradient1:#DCFFEA; 
+
+}
+@font-face {
+  font-family: font1;
+  src: url(../public/Fonts/Albra-Sans-Light.woff2);
+}
+
+@font-face {
+  font-family: font2;
+  src: url(../public/Fonts/NeufileGrotesk-MediumExtended.woff2);
+}
+
+
+
+@font-face {
+  font-family: font3;
+  src: url(../public/Fonts/fa-regular-400.woff2);
+}
+@font-face {
+  font-family: font4;
+  src: url(../public/Fonts/fa-solid-900.woff2);
+}
+
+@font-face {
+  font-family: font5;
+  src: url(../public/Fonts/gtnicon-10.woff);
+}
+
+
+@font-face {
+  font-family: font6;
+  src: url(../public/Fonts/gtnicon-3.woff);
+}
+@font-face {
+  font-family: font7;
+  src: url(../public/Fonts/gtnicon-5.woff);
+}
+
+@font-face {
+  font-family: font8;
+  src: url(../public/Fonts/gtnicon-6.woff);
+}
+@font-face {
+  font-family: font9;
+  src: url(../public/Fonts/gtnicon-7.woff);
+}
+
+@font-face {
+  font-family: font10;
+  src: url(../public/Fonts/gtnicon-8.woff);
+}
+
+@font-face {
+  font-family: font11;
+  src: url(../public/Fonts/gtnicon-9.woff);
+}
+
+@font-face {
+  font-family: inter;
+  src: url(../public/Fonts/Inter\,Poppins\,Roboto_Condensed\,Savate.zip);
+}
+@font-face {
+  font-family: bio;
+  src: url(../public/Fonts/Bitcount_Ink\,Inter\,Poppins\,Roboto_Condensed\,Savate.zip);
+}
+  
+.marquee-container {
+  overflow: hidden;
+
+  padding: 20px 0;
+  position: relative;
+
+  /* Blur/fade effect at left & right edges */
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  width: 150px;
+  margin-right: 30px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container:hover .marquee {
+  animation-play-state: paused;
+}
+
+.back{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(249, 249, 249, 1) 100%);
+
+}
+.hovericone:hover{
+  background: white ;
+  color:#1C756B;
+}
+
+.shadow{
+  box-shadow: 0px 8px 16px 0px #94b8977e;
+    transition: box-shadow 0.3s ease;
+  }
+   
+  .gradient-text {
+      background: linear-gradient(160deg, rgba(220,255,234,1) 0%, rgba(27,117,107,1) 51.8%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
