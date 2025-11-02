@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { Context } from '../../../main'
 import { Navigate } from 'react-router-dom'
-import AdminLogin from './adminLogin'
+import AdminLogin from "./AdminLogin";
+
 import AdminRegister from '../AdminRegister'
 
 const AdminAuth = () => {
