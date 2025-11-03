@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Eye, EyeOff, Mail, Lock, Phone, User } from "lucide-react";
-import axios from "axios";
+import API from "../../api/axiosInstance";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../../main";
@@ -79,13 +79,9 @@ const AdminRegister = () => {
         phone: `+91${formValues.phone}`,
       };
 
-      const response = await axios.post(
-        "http://localhost:3000/api/register",
-        sendingData,
-        {
-          withCredentials: true,
-          headers: { "Content-Type": "application/json" },
-        }
+      const response = await API.post(
+        "/api/register",
+        sendingData
       );
 
       if (response.status === 200) {

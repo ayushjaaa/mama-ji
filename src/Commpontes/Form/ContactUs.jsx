@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import axios from "axios";
+import API from "../../api/axiosInstance";
 import {
   MapPin,
   Clock,
@@ -127,7 +127,7 @@ const ContactUs = () => {
   occupation
  }
 
-  const respone = await axios.post("http://localhost:3000/api/user/userregister",data)
+  const respone = await API.post("/api/user/userregister", data)
 
    console.log(respone)
          setFormData({

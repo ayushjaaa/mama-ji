@@ -4,8 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
 const Home = lazy(() => import(/* webpackChunkName: "home" */ "../Home/Home"));
 const Aboutsus = lazy(() => import(/* webpackChunkName: "about" */ "../Commpontes/Aboutsus/Aboutsus"));
 const FormPage = lazy(() => import(/* webpackChunkName: "contact-form" */ "../Home/FormPage"));

@@ -49,9 +49,9 @@ const Section1 = () => {
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-6 pt-6">
             {/* Overlapping user images */}
             <div className="relative flex">
-              <div className="h-10 w-10 rounded-full border-2 border-white bg-amber-200 absolute left-0 z-30" />
-              <div className="h-10 w-10 rounded-full border-2 border-white bg-amber-300 absolute left-6 z-20" />
-              <div className="h-10 w-10 rounded-full border-2 border-white bg-amber-400 absolute left-12 z-10" />
+              <div className="h-10 w-10 rounded-full border-2 border-white bg-amber-200 absolute left-0 " />
+              <div className="h-10 w-10 rounded-full border-2 border-white bg-amber-300 absolute left-6 " />
+              <div className="h-10 w-10 rounded-full border-2 border-white bg-amber-400 absolute left-12" />
               <div className="h-10 w-10 opacity-0" /> {/* spacing */}
             </div>
 

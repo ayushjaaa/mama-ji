@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@tailwind components;
+@tailwind utilities;
 @theme {
   --color-m: #3eb489;
   --color-text-primary: #001810;

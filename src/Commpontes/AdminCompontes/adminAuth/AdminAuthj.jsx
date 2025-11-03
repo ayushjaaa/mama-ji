@@ -5,7 +5,7 @@ import AdminLogin from "./AdminLogin";
 
 import AdminRegister from '../AdminRegister'
 
-const AdminAuth = () => {
+const AdminAuthj = () => {
     const {isAuthenticated} =  useContext(Context)
     console.log(isAuthenticated)
     const [isLogin,setlogin] = useState(true) 
@@ -30,4 +30,4 @@ const AdminAuth = () => {
   )
 }
 
-export default AdminAuth
+export default AdminAuthj
