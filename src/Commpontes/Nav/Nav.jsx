@@ -64,7 +64,7 @@ const Nav = () => {
             <span className="block h-[3px] bg-gray-800 rounded"></span>
             <span className="block h-[3px] bg-gray-800 rounded"></span>
           </div>
-        )}
+        )} 
       </motion.button>
 
       {/* Mobile Drawer */}
