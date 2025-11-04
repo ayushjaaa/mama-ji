@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Menu, X, Home, Info, Star, BookOpen, Phone } from "lucide-react";
+import { X, Home, Info, Star, BookOpen, Phone } from "lucide-react";
 import Button from "../Button.jsx/Button";
 
 const navItems = [
@@ -16,15 +16,14 @@ const navItems = [
 const Nav = () => {
   const [open, setOpen] = useState(false);
 
-  // prevent body scroll when nav is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
   }, [open]);
 
   return (
-    <header className="flex justify-between items-center px-6 md:px-10 py-5 relative bg-white z-[60] shadow-sm">
+    <header className="flex justify-between items-center px-5 sm:px-8 md:px-10 py-4 bg-white shadow-sm relative z-[60]">
       {/* Logo */}
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center gap-2">
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#1C756B] to-[#4ad1b2] flex items-center justify-center shadow-md">
           <span className="text-white font-extrabold text-lg">C</span>
         </div>
@@ -49,25 +48,21 @@ const Nav = () => {
       </nav>
 
       {/* Hamburger / Close button */}
-      {!open ? (
-        <motion.button
-          whileTap={{ scale: 0.9 }}
-          onClick={() => setOpen(true)}
-          className="flex lg:hidden flex-col justify-between w-7 h-6 cursor-pointer"
-        >
-          <span className="block h-[3px] bg-gray-800 rounded"></span>
-          <span className="block h-[3px] bg-gray-800 rounded"></span>
-          <span className="block h-[3px] bg-gray-800 rounded"></span>
-        </motion.button>
-      ) : (
-        <motion.button
-          whileTap={{ scale: 0.9 }}
-          onClick={() => setOpen(false)}
-          className="z-[100] lg:hidden flex flex-col justify-center items-center w-7 h-7"
-        >
-          <X size={28} className="text-gray-800" />
-        </motion.button>
-      )}
+      <motion.button
+        whileTap={{ scale: 0.9 }}
+        onClick={() => setOpen(!open)}
+        className="lg:hidden w-8 h-8 flex items-center justify-center"
+      >
+        {open ? (
+          <X size={26} className="text-gray-800" />
+        ) : (
+          <div className="flex flex-col justify-between w-6 h-5">
+            <span className="block h-[3px] bg-gray-800 rounded"></span>
+            <span className="block h-[3px] bg-gray-800 rounded"></span>
+            <span className="block h-[3px] bg-gray-800 rounded"></span>
+          </div>
+        )}
+      </motion.button>
 
       {/* Mobile Drawer */}
       <AnimatePresence>
@@ -76,13 +71,12 @@ const Nav = () => {
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="fixed top-0 right-0 w-[80vw] h-screen bg-white/70 backdrop-blur-md shadow-2xl z-50 flex flex-col justify-between rounded-l-2xl"
+            transition={{ duration: 0.45, ease: "easeInOut" }}
+            className="fixed top-0 right-0 max-w-xs w-full h-[100dvh] bg-white/80 backdrop-blur-lg shadow-2xl z-50 flex flex-col justify-between rounded-l-2xl overflow-y-auto"
           >
-            <div className="p-8 flex flex-col space-y-6">
-              <h2 className="text-xl font-semibold text-gray-800 mb-6">Menu</h2>
+            <div className="p-6 sm:p-8 flex flex-col space-y-5 pt-[max(env(safe-area-inset-top),1rem)]">
+              <h2 className="text-xl font-semibold text-gray-800">Menu</h2>
 
-              {/* Menu Links */}
               {navItems.map((link, i) => (
                 <motion.div
                   key={i}
@@ -90,9 +84,9 @@ const Nav = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
                   whileHover={{ scale: 1.03 }}
-                  className="flex items-center gap-3 py-2 px-3 rounded-xl cursor-pointer hover:bg-gradient-to-r hover:from-[#e6f5f3] hover:to-[#f2fcfa] transition"
+                  className="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer hover:bg-[#f5fdfb] transition"
                 >
-                  <span className="text-[#1C756B]">{link.icon}</span>
+                  <span className="text-[#1C756B] flex-shrink-0">{link.icon}</span>
                   <Link
                     to={link.route}
                     onClick={() => setOpen(false)}
@@ -103,7 +97,7 @@ const Nav = () => {
                 </motion.div>
               ))}
 
-              <div className="pt-8 border-t border-gray-200">
+              <div className="pt-6 border-t border-gray-200">
                 <Button
                   variant="primary"
                   buttonText="Become Partner"
@@ -112,11 +106,10 @@ const Nav = () => {
               </div>
             </div>
 
-            {/* Footer Section */}
-            <div className="p-6 border-t border-gray-200 text-sm text-gray-600 flex flex-col space-y-2">
+            <div className="p-6 border-t border-gray-200 text-sm text-gray-600 space-y-2">
               <p>📞 +91 98765 43210</p>
               <p>✉️ support@credigi.com</p>
-              <div className="flex space-x-4 pt-2 text-[#1C756B]">
+              <div className="flex space-x-4 pt-2 text-[#1C756B] text-lg">
                 <i className="ri-facebook-fill"></i>
                 <i className="ri-instagram-line"></i>
                 <i className="ri-twitter-x-line"></i>
