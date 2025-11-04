@@ -68,7 +68,7 @@ const Nav = () => {
       </motion.button>
 
       {/* Mobile Drawer */}
-      <AnimatePresence>
+      <AnimatePresence> 
         {open && (
           <motion.aside  
             initial={{ x: "100%" }}
