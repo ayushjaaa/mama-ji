@@ -78,24 +78,28 @@ const Nav = () => {
               <h2 className="text-xl font-semibold text-gray-800">Menu</h2>
 
               {navItems.map((link, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                  whileHover={{ scale: 1.03 }}
-                  className="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer hover:bg-[#f5fdfb] transition"
-                >
-                  <span className="text-[#1C756B] flex-shrink-0">{link.icon}</span>
-                  <Link
-                    to={link.route}
-                    onClick={() => setOpen(false)}
-                    className="text-gray-800 font-medium"
-                  >
-                    {link.label}
-                  </Link>
-                </motion.div>
-              ))}
+  <motion.div
+    key={i}
+    initial={{ opacity: 0, x: 30 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ delay: i * 0.05 }}
+  >
+    <Link
+      to={link.route}
+      onClick={() => setOpen(false)}
+      className="flex items-center gap-3 py-2 px-3 rounded-lg transition active:scale-[0.97] active:bg-[#e9f9f5]"
+    >
+      <motion.span
+        whileTap={{ scale: 0.9 }}
+        className="text-[#1C756B] flex-shrink-0"
+      >
+        {link.icon}
+      </motion.span>
+      <span className="text-gray-800 font-medium">{link.label}</span>
+    </Link>
+  </motion.div>
+))}
+
 
               <div className="pt-6 border-t border-gray-200">
                 <Button
