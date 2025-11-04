@@ -70,7 +70,7 @@ const Nav = () => {
       {/* Mobile Drawer */}
       <AnimatePresence>
         {open && (
-          <motion.aside
+          <motion.aside 
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
