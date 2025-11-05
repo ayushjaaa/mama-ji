@@ -21,7 +21,7 @@ const Nav = () => {
   }, [open]);
 
   return (
-    <header className="flex justify-between items-center px-5 sm:px-8 md:px-10 py-4 bg-white shadow-sm relative z-[60]">
+    <header className="flex justify-between items-center px-5 sm:px-8 md:px-10 py-4  w-full  bg-white/30 backdrop-blur-md border-b border-white/20 shadow-sm relative z-[60]">
 
       <div className="flex items-center gap-2">
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#1C756B] to-[#4ad1b2] flex items-center justify-center shadow-md">
@@ -74,7 +74,7 @@ const Nav = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.45, ease: "easeInOut" }}
-            className="fixed top-0 right-0 max-w-xs w-full h-[100dvh] bg-white/80 backdrop-blur-lg shadow-2xl z-40 flex flex-col justify-between rounded-l-2xl overflow-y-auto"
+            className="fixed top-0 right-0 max-w-xs w-full h-[100dvh] bg-white backdrop-blur-lg shadow-2xl z-40 flex flex-col justify-between rounded-l-2xl overflow-y-auto"
           >
             <div className="p-6 sm:p-8 flex flex-col space-y-5 pt-[max(env(safe-area-inset-top),1rem)]">
               <h2 className="text-xl font-semibold text-gray-800">Menu</h2>

@@ -42,7 +42,7 @@ const Frequesntquestion = () => {
   const toggle = (id) => setOpenId(openId === id ? null : id);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-white py-20 px-6">
+    <section className="flex flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-white py-20 px-6">
       
       <div className="max-w-3xl w-full">
         {/* Header */}

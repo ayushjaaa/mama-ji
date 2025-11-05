@@ -33,7 +33,7 @@ const PlanCard = memo(({ plan, isClicked, onClick, index }) => {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        clik
+
         onClick={() => onClick(index)}
         className={`mt-6 w-full py-3 rounded-lg text-white font-semibold transition-all 
         ${isClicked ? "bg-blue-700 scale-95" : "bg-blue-500 hover:bg-blue-600"}`}

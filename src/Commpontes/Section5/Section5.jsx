@@ -93,7 +93,7 @@ const Section5 = () => {
       };
     
   return (
-    <div className='container mx-auto text-center  p-8   lg:p-1 flex flex-col'>
+    <div className='container mx-auto text-center  px-8   lg:p-1 flex flex-col'>
         <div className='p-1 right md:p-20'>
             <h1 className='w-full text-5xl font-bold'> Credit <span className="bg-[linear-gradient(160deg,rgba(220,255,234,1)_0%,rgba(27,117,107,1)_51.8%)] bg-clip-text text-transparent " > Card Opetions</span></h1>
             <p className='p-4 px-0 md:px-32 text-xl leading-5 text-[#64758B]'>Select the perfect credit card that matches your lifestyle and spending habits  </p>
