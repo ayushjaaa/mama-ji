@@ -6,7 +6,7 @@ const PlanCard = memo(({ plan, isClicked, onClick, index }) => {
   return (
     <div
       className={`w-full h-fit ${plan.recomandee ? "recomandee" : "bg-white"}
-      p-12  rounded-2xl border shadow-premium`}
+      p-20  rounded-2xl border shadow-premium`}
     >
       <h3 className={`text-2xl font-semibold ${plan.recomandee ? "text-white" : ""}`}>
         {plan.name}

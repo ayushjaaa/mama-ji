@@ -38,7 +38,7 @@ const Section4 = () => {
       className="w-full container m-auto min-h-screen flex flex-col lg:flex-row"
     >
       {/* Left Section */}
-      <div className="w-full lg:w-1/2 bg-[#388279] text-white flex flex-col justify-center px-6 sm:px-10 lg:px-24 py-12 gap-8">
+      <div className="w-full lg:w-1/2 bg-[#388279] text-white flex flex-col justify-center px-10 sm:px-10 lg:px-24 py-12 gap-8">
         <h1 className="text-4xl sm:text-4xl lg:text-6xl font-bold">
           The Most Comfortable Way To Make Online Payment
         </h1>

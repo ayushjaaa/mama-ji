@@ -5,8 +5,8 @@ import { ArrowRight } from 'lucide-react'
 
 const Section6 = () => {
     return (
-        <div className='flex min-h-screen flex-col justify-center items-center p-18 gap-4 '>
-            <h1 className='text-center text-3xl md:text-5xl font-semibold'>How to Get  <span className="bg-[linear-gradient(160deg,rgba(220,255,234,1)_0%,rgba(27,117,107,1)_51.8%)] bg-clip-text text-transparent " >The Card</span></h1>
+        <div className='flex min-h-screen flex-col justify-center items-center px-10 gap-4 '>
+            <h1 className='text-center w-full text-5xl md:text-5xl font-semibold'>How to Get  <span className="bg-[linear-gradient(160deg,rgba(220,255,234,1)_0%,rgba(27,117,107,1)_51.8%)] bg-clip-text text-transparent " >The Card</span></h1>
             <p className=' w-full md:w-1/2 text-center text-[#7A7A7A]'>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
 
 

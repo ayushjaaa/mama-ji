@@ -98,7 +98,7 @@ const Section5 = () => {
             <h1 className='w-full text-5xl font-bold'> Credit <span className="bg-[linear-gradient(160deg,rgba(220,255,234,1)_0%,rgba(27,117,107,1)_51.8%)] bg-clip-text text-transparent " > Card Opetions</span></h1>
             <p className='p-4 px-0 md:px-32 text-xl leading-5 text-[#64758B]'>Select the perfect credit card that matches your lifestyle and spending habits  </p>
         </div>
-      <div className='w-full h-fit   grid grid-cols-[repeat(auto-fit,minmax(290px,1fr))] gap-12 px-4  '>
+      <div className='w-full h-fit   grid grid-cols-[repeat(auto-fit,minmax(290px,1fr))] gap-8 sm:gap-4  '>
         {
             plans.map((elem,index)=>{
 
@@ -111,7 +111,7 @@ return(
 <p className={`leading-8    ${elem.recomandee ? "text-white ":" text-[#171B26]"}  text-sm flex items-center gap-4`}>  <Check className={`   ${elem.recomandee ? "text-white ":" text-blue-500"} h-5 w-5 `}/> {elem.rewords}</p>
 {elem.features.map((fetureleme)=>{
     return(
-<p className={`leading-7   ${elem.recomandee ? "text-white ":" text-[#171B26]"} text-start text-sm flex justify-start gap-4`}>  <Check className={` ${elem.recomandee ? "text-white ":" text-blue-500"}  h-5 w-5 mt-2`}/> {fetureleme}</p>   
+<p className={`leading-7   ${elem.recomandee ? "text-white ":" text-[#171B26]"} text-start text-sm flex justify-start gap-4 `}>  <Check className={` ${elem.recomandee ? "text-white ":" text-blue-500"}  h-5 w-5 mt-2`}/> {fetureleme}</p>   
     )
 })}
 {

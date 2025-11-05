@@ -4,11 +4,11 @@ import { Star } from "lucide-react";
 
 const Section1 = () => {
   return (
-    <section className="w-full flex justify-center items-center bg-white overflow-hidden relative">
+    <section className="w-full flex justify-center items-center  overflow-hidden relative">
       {/* Decorative Underline Image */}
-      <div className="hidden lg:block absolute top-[35%] left-[22%] rotate-6">
+      <div className="hidden lg:block absolute top-[26%] left-[28%] rotate-6 xl:hidden">
         <img
-          className="w-60 h-auto object-contain"
+          className="w-[60%] h-auto object-contain"
           src="/Fonts/underline-swoshes.png"
           alt="underline decoration"
         />
@@ -46,7 +46,7 @@ const Section1 = () => {
           </div>
 
           {/* Ratings + Users */}
-          <div className="flex flex-col sm:flex-row justify-center  lg:justify-start items-center gap-6 pt-6">
+          <div className="flex flex-col sm:flex-row justify-center  lg:justify-start items-center gap-6 sm:gap-16 pt-6">
             {/* Overlapping user images */}
             <div className="relative flex flex-row  w-full justify-center items-center  sm:w-fit">
               <div className="h-10 w-10 rounded-full border-2 border-white bg-amber-200 absolute  left-[38%] sm:left-0 " />

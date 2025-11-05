@@ -13,7 +13,7 @@ const handelKeydown = (e,index) =>{
   }
 }
   return (
-<div>
+<div className=''>
     <Nav/>
 <div className=' w-full'>
 <div className=' h-60 w-full back relative text-center'>
@@ -31,10 +31,10 @@ Our      <span className='gradient-text'>Mission</span> </h1>
 <div>
     
 </div>
-<div>
+<div className=''>
 
     <AboutSection/>
-    <TeamSection/>
+    <TeamSection className=""/>
     <Frequesntquestion/>
     <Footer/>
 </div>

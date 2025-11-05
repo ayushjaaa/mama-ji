@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section className="bg-white py-12 px-4 md:px-12">
+    <section className="bg-white py-12  px-8 md:px-12">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Left - Image with Card */}
         <div className="relative">

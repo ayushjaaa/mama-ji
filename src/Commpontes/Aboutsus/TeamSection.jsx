@@ -30,7 +30,7 @@ const teamMembers = [
 
 const TeamSection = () => {
   return (
-    <div className="md:py-20 w-full text-center container mx-auto px-4 pb-20">
+    <div className="px-8 md:py-20 w-full text-center container mx-auto pb-20">
       {/* Heading */}
       <h1 className="text-4xl md:text-6xl font-semibold mb-2">
         Our{" "}

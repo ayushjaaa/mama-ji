@@ -12,6 +12,7 @@ const AdminAuth = lazy(() => import("../Commpontes/AdminCompontes/adminAuth/Admi
 const otpVerfication = lazy(() => import("../Commpontes/AdminCompontes/otpVerificatiob/otpVerfication"));
 const UseTranstion = lazy(() => import("../Commpontes/useTranstion/UseTranstion"));
 import DelayedLorder from "../Commpontes/Lorder/DelayedLorder";
+import NotFound from "../Commpontes/NotFound/NotFound";
 
 const RoutesComponet = () => {
   return (
@@ -28,6 +29,7 @@ const RoutesComponet = () => {
             <Route path="/admin/auth" element={<AdminAuth />} />
             <Route path="/otp-verfication-register/:email/:phone" element={<otpVerfication />} />
             <Route path="/usetranstion" element={<UseTranstion />} />
+            <Route path="*" element={<NotFound/>}></Route>
           </Routes>
         </Suspense>
       </RouteLoader>
