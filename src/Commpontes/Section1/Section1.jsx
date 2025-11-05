@@ -46,12 +46,12 @@ const Section1 = () => {
           </div>
 
           {/* Ratings + Users */}
-          <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-6 pt-6">
+          <div className="flex flex-col sm:flex-row justify-center  lg:justify-start items-center gap-6 pt-6">
             {/* Overlapping user images */}
-            <div className="relative flex">
-              <div className="h-10 w-10 rounded-full border-2 border-white bg-amber-200 absolute left-0 " />
-              <div className="h-10 w-10 rounded-full border-2 border-white bg-amber-300 absolute left-6 " />
-              <div className="h-10 w-10 rounded-full border-2 border-white bg-amber-400 absolute left-12" />
+            <div className="relative flex flex-row  w-full justify-center items-center  sm:w-fit">
+              <div className="h-10 w-10 rounded-full border-2 border-white bg-amber-200 absolute  left-[38%] sm:left-0 " />
+              <div className="h-10 w-10 rounded-full border-2 border-white bg-amber-300 absolute left-[42%] sm:left-6 " />
+              <div className="h-10 w-10 rounded-full border-2 border-white bg-amber-400 absolute left-[48%] sm:left-12" />
               <div className="h-10 w-10 opacity-0" /> {/* spacing */}
             </div>
 

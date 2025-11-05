@@ -1,36 +1,36 @@
-
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import Loader from "../Commpontes/Lorder/Lorder";
 import 'react-toastify/dist/ReactToastify.css';
-
-const Home = lazy(() => import(/* webpackChunkName: "home" */ "../Home/Home"));
-const Aboutsus = lazy(() => import(/* webpackChunkName: "about" */ "../Commpontes/Aboutsus/Aboutsus"));
-const FormPage = lazy(() => import(/* webpackChunkName: "contact-form" */ "../Home/FormPage"));
-const PartnerPage = lazy(() => import(/* webpackChunkName: "partner" */ "../Home/PartnerPage"));
-const AdminAuth = lazy(() => import(/* webpackChunkName: "admin-auth" */ "../Commpontes/AdminCompontes/adminAuth/AdminAuthj"));
-const otpVerfication = lazy(() => import(/* webpackChunkName: "otp-verification" */ "../Commpontes/AdminCompontes/otpVerificatiob/otpVerfication"));
-const UseTranstion = lazy(() => import(/* webpackChunkName: "use-transtion"*/ "../Commpontes/useTranstion/UseTranstion"));
-
+import RouteLoader from "../Commpontes/Lorder/RouteLoader";
+const Home = lazy(() => import("../Home/Home"));
+const Aboutsus = lazy(() => import("../Commpontes/Aboutsus/Aboutsus"));
+const FormPage = lazy(() => import("../Home/FormPage"));
+const PartnerPage = lazy(() => import("../Home/PartnerPage"));
+const AdminAuth = lazy(() => import("../Commpontes/AdminCompontes/adminAuth/AdminAuthj"));
+const otpVerfication = lazy(() => import("../Commpontes/AdminCompontes/otpVerificatiob/otpVerfication"));
+const UseTranstion = lazy(() => import("../Commpontes/useTranstion/UseTranstion"));
+import DelayedLorder from "../Commpontes/Lorder/DelayedLorder";
 
 const RoutesComponet = () => {
   return (
     <>
       <ToastContainer theme="colored" />
-
-   
-      <Suspense fallback={<div className="text-center mt-10">Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<Aboutsus />} />
-          <Route path="/contact" element={<FormPage />} />
-          <Route path="/BecomePartner" element={<PartnerPage />} />
-          <Route path="/admin/auth" element={<AdminAuth />} />
-          <Route path="/otp-verfication-register/:email/:phone" element={<otpVerfication/>} />
-          <Route path="/usetranstion" element={<UseTranstion/>} />
-          <Route path="/usetranstion" element={<UseTranstion/>} />
-        </Routes>
-      </Suspense>
+      
+      <RouteLoader>
+      <Suspense fallback={<DelayedLorder  delay={150} size={60} text="Loading page..." />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<Aboutsus />} />
+            <Route path="/contact" element={<FormPage />} />
+            <Route path="/BecomePartner" element={<PartnerPage />} />
+            <Route path="/admin/auth" element={<AdminAuth />} />
+            <Route path="/otp-verfication-register/:email/:phone" element={<otpVerfication />} />
+            <Route path="/usetranstion" element={<UseTranstion />} />
+          </Routes>
+        </Suspense>
+      </RouteLoader>
     </>
   );
 };

@@ -93,12 +93,12 @@ const Section5 = () => {
       };
     
   return (
-    <div className='container mx-auto text-center  p-1 flex flex-col'>
+    <div className='container mx-auto text-center  p-8   lg:p-1 flex flex-col'>
         <div className='p-1 right md:p-20'>
             <h1 className='w-full text-5xl font-bold'> Credit <span className="bg-[linear-gradient(160deg,rgba(220,255,234,1)_0%,rgba(27,117,107,1)_51.8%)] bg-clip-text text-transparent " > Card Opetions</span></h1>
             <p className='p-4 px-0 md:px-32 text-xl leading-5 text-[#64758B]'>Select the perfect credit card that matches your lifestyle and spending habits  </p>
         </div>
-      <div className='w-full h-fit   grid grid-cols-[repeat(auto-fit,minmax(290px,1fr))] gap-4  '>
+      <div className='w-full h-fit   grid grid-cols-[repeat(auto-fit,minmax(290px,1fr))] gap-12 px-4  '>
         {
             plans.map((elem,index)=>{
 
@@ -131,17 +131,17 @@ return(
 
 
 </div>
-<button
+{/* <button
       onClick={(e)=>handleClick(e,index)}
       name={`${index}`}
-      className={`px-6 py-3 rounded-lg text-white font-semibold transition-all duration-300 
-      bg-blue-500 
-      hover:bg-blue-600
-      ${isClicked[index] ? "bg-blue-700 scale-95" : ""}
+      className={`px-6 py-3 text-black rounded-lg border-2 font-semibold transition-all duration-300 
+      bg-white-500 
+      hover:bg-white-600
+      ${isClicked[index] ? "bg-white-700 scale-95" : ""}
       `}
     >
       Click Me
-    </button>
+    </button> */}
 </div>
 )
             })

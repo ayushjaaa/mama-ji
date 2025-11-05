@@ -47,7 +47,6 @@ const Nav = () => {
         <Button variant="primary" buttonText="Become Partner" to="/BecomePartner" />
       </nav>
 
-      {/* Hamburger / Close button */}
   <motion.button
   whileTap={{ scale: 0.9 }}
   onClick={() => setOpen(!open)}
@@ -67,7 +66,7 @@ const Nav = () => {
         )} 
       </motion.button>
 
-      {/* Mobile Drawer */}
+    
       <AnimatePresence> 
         {open && (
           <motion.aside  

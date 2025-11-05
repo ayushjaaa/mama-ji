@@ -13,14 +13,19 @@ import Footer from '../Commpontes/Footer/Footer'
 import Frequesntquestion from "../Commpontes/Frequentaskedqeustion/Frequesntquestion"
 import CoreAdvantages from "../Commpontes/Frequentaskedqeustion/CoreAdvantages"
 import Callsupport from "../Commpontes/Callsupport/Callsupport"
+
 // import Trigger from '../Commpontes/Trigger'
 import AnimatedNav from '../Commpontes/AdminCompontes/AnimatedNav'
+
+import { Suspense, lazy } from "react";
+
 const Home = () => {
 
   return (
     <div>
       {/* <Trigger/> */}
 
+    
         <Nav/>
       <Section1/>
 <Section2/>
