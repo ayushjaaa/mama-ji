@@ -18,14 +18,15 @@ import Callsupport from "../Commpontes/Callsupport/Callsupport"
 import AnimatedNav from '../Commpontes/AdminCompontes/AnimatedNav'
 
 import { Suspense, lazy } from "react";
+import PopeUpForm from '../Commpontes/PopeUpForm/PopeUpForm'
 
 const Home = () => {
 
   return (
     <div>
-      {/* <Trigger/> */}
+  
 
-    
+    <PopeUpForm/>
         <Nav/>
       <Section1/>
 <Section2/>
